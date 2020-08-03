@@ -114,6 +114,8 @@
   margin-top: 3.5rem;
   @media only screen and (max-width: $bp-medium) {
     display: flex;
+    flex-basis: 100%;
+
     margin-top: 0;
   }
   &__item {
@@ -122,10 +124,12 @@
 
     &:not(:last-child) {
       margin-bottom: 1rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0 !important;
+      }
     }
-    @media only screen and (max-width: $bp-medium) {
-      margin-bottom: 0 !important;
-    }
+
+    flex: 1;
   }
 
   &__item::before {
@@ -162,6 +166,7 @@
     display: flex;
     align-items: center;
     z-index: 2;
+    justify-content: center;
   }
 
   &__icon {

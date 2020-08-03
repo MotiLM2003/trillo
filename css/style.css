@@ -207,15 +207,17 @@ body {
   @media only screen and (max-width: 56.25rem) {
     .side-nav {
       display: flex;
+      flex-basis: 100%;
       margin-top: 0; } }
   .side-nav__item {
     position: relative;
-    display: block; }
+    display: block;
+    flex: 1; }
     .side-nav__item:not(:last-child) {
       margin-bottom: 1rem; }
-    @media only screen and (max-width: 56.25rem) {
-      .side-nav__item {
-        margin-bottom: 0 !important; } }
+      @media only screen and (max-width: 56.25rem) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0 !important; } }
   .side-nav__item::before {
     content: '';
     position: absolute;
@@ -241,7 +243,8 @@ body {
     padding: 1.5rem 3rem;
     display: flex;
     align-items: center;
-    z-index: 2; }
+    z-index: 2;
+    justify-content: center; }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
